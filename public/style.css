@@ -1,0 +1,240 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish",sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(purple,blueviolet);
+}
+
+.container{
+  width:400px;
+  height: 550px;
+  background-color: lime;
+  border-radius: 7px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .head{
+  width: 100%;
+  height: 80px;
+  background-color: dodgerblue;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.container .head h2{
+  margin-left: 10px;
+}
+
+
+
+.container .head p{
+  margin-right: 10px;
+}
+
+.container .footer{
+  width: 100%;
+  height: 100%;
+  background-color: skyblue;
+  overflow: auto;
+}
+
+.container .inputs{
+  width: 100%;
+  background-color: dodgerblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+button,input{
+  border: none;
+  outline: none;
+}
+
+button:focus,input:focus{
+  border: none;
+  outline: none;
+}
+
+.container .inputs input,
+.container .inputs button{
+  width: 97%;
+  padding: 10px;
+  margin: 2px;
+  border-radius: 3px;
+}
+
+.container .inputs button{
+  background-color: orangered;
+  color: khaki;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 5px;
+  transition: all 0.20s ease-in-out;
+}
+
+.container .inputs button:hover{
+  background-color: khaki;
+  color: orangered;
+}
+
+
+.container .inputs input:first-child{
+  margin-top: 5px;
+}
+
+.container .footer p:nth-child(even){
+  background-color:lavender;
+}
+
+.container .footer p{
+  position: relative;
+  overflow: hidden;
+  color:black;
+  background-color: white;
+  padding: 3px;
+  border-radius: 3px;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.container .footer p span{
+  color: blue;
+  position: relative;
+  padding: 10px;
+}
+.container2{
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: #430f58;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+}
+
+.container2::before{
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background-color: #6643b5;
+}
+
+.container2::after{
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background-color: #8594e4;
+}
+
+.container2 span{
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  background-color: #8aacff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: none;
+  overflow: hidden;
+}
+
+span a{
+  width: 30%;
+  background-color: blue;
+  text-align: center;
+  padding: 20px;
+  transition: 0.50s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+span a:hover{
+  width: 200px;
+  transition-delay: 0.20s;
+  overflow: hidden;
+}
+
+span a strong{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transition: 0.20s;
+  text-decoration: none;
+  color: #8aacff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+
+}
+
+span a::before{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #8aacff;
+  border-right: 3px solid #8aacff;
+  transform: rotate(45deg);
+  transition: 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+span a::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #8aacff;
+  border-right: 3px solid #8aacff;
+  transform: rotate(45deg);
+  transition: 0.30s;
+  transform: translateX(-110px) rotate(45deg);
+  overflow: hidden;
+}
+
+span a:hover::after{
+  transform: translateX(-90px) rotate(45deg);
+  transition-delay: 0.50s;
+  overflow: hidden;
+}
+
+span a:hover strong{
+  visibility: visible;
+  transition-delay: 0.30s;
+  overflow: hidden;
+}
+
+span a:hover::before{
+  transform: translateX(110px) rotate(45deg);
+  transition-delay: 0.10s;
+  overflow: hidden;
+}
